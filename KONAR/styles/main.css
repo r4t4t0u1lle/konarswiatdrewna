@@ -1,0 +1,74 @@
+/* główne kolory */
+:root{
+    --primary-white: rgb(242, 242, 242);
+    --primary-light: #515357;
+    --primary-dark: rgb(34, 40, 49);
+    --accent: #cc8015;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+section{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: grid;
+}
+
+.container h1{
+    text-align: center;
+}
+
+footer{
+    display: grid;
+    width: 100vw;
+    height: 7vh;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-dark);
+    font-size: 1rem;
+    color: var(--primary-white);
+    overflow: hidden;
+}
+
+footer a{
+    color: var(--accent);
+    font-weight: bold;
+    transition: all .35s ease-out;
+}
+
+footer a:hover{
+    cursor: pointer;
+}
+
+@media  (min-width: 768px) {
+    .header{
+        font-size: 2.25rem;
+    }
+}

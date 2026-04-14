@@ -1,0 +1,310 @@
+#oferta{
+    background-color: var(--primary-dark);
+    color: var(--accent);
+    height: auto;
+}
+
+#oferta .container{
+    padding: 4rem 2rem 4rem 2rem;
+    justify-content: center;
+}
+
+#oferta .container h1{
+    text-align: center;
+}
+
+#oferta .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+    transition: all 1s ease;
+}
+
+#oferta .card-container-row{
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.card-container .card{
+    display: grid;
+    width: 150px;
+    height: 280px;
+    border-radius: 10px;
+    align-items: end;
+    transition: all 1.9s ease, transform .35s ease-out;
+}
+
+@media (min-width: 500px) and (min-height: 500px){
+    @media (hover: hover){
+        .card:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.card.active{
+    transform: scale(1.1);
+}
+
+.card.active>.card-name{
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+    background-color: var(--accent);
+    color: var(--primary-white);
+}
+
+#tarcica{
+    background-image: url(../images/tarcica/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+#okleiny{
+    background-image: url(../images/okleiny/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+#el_meblowe{
+    background-image: url(../images/el_meblowe/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+#podlogi{
+    background-image: url(../images/podlogi/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+
+.card-container .card-name{
+    background-color: var(--primary-white);
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-dark);
+    border-radius: 0 0 10px 10px;
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    transition: all .35s ease-out;
+}
+
+.card-name h1{
+    margin-top: .75rem;
+    font-size: 1rem;
+}
+
+/* ---OPIS PRODUKTÓW--- */
+
+#description_container{
+    visibility: hidden;
+    width: auto;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#description_container.active{
+    visibility: visible;
+    margin-top: 3.5rem;
+}
+
+#tarcica_opis.active{
+    height: 2003px;
+    visibility: visible;
+}
+
+#okleiny_opis.active{
+    height: 1450px;
+    visibility: visible;
+}
+
+#el_meblowe_opis.active{
+    height: 743px;
+    visibility: visible;
+}
+
+#podlogi_opis.active{
+    height: 1185px;
+    visibility: visible;
+}
+
+.description{
+    display: grid;
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+    gap: 2rem;
+    transition: all 1s ease;
+}
+
+.description-column{
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--primary-white);
+    border-radius: 10px;
+}
+
+#okleiny_opis .description-column{
+    padding-bottom: 2.5rem;
+}
+
+.description h1{
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.description#podlogi_opis .description-column:last-of-type h1{
+    font-size: 1.65rem;
+}
+
+.description ul{
+    display: grid;
+    gap: .35rem;
+    color: var(--primary-dark);
+    margin-left: 1.5rem;
+}
+
+.description#podlogi_opis ul{
+    padding-right: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.description li{
+    margin-left: 2.5rem;
+    list-style: none;
+    font-size: 1.25rem;
+}
+
+.description li>a{
+    color: #76777a;
+    font-size: .85em;
+}
+
+.description li.list-title:first-of-type{
+    margin-top: 0;
+}
+
+.description li.list-title{
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.description .product-description{
+    padding: 2.5rem 1.75rem;
+    color: var(--primary-dark);
+}
+
+#okleiny_opis .product-description{
+    padding: 2.5rem 0;
+    text-indent: 3rem;
+}
+
+
+.product-description p{
+    margin: .5rem 0;
+}
+
+
+@media (min-width: 896px){
+    .description{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #tarcica_opis.active{
+        height: 1213px;
+    }
+
+    #tarcica_opis .description-column:nth-of-type(1){
+        order: 1;
+    }
+
+    #tarcica_opis .description-column:nth-of-type(2){
+        order: 3;
+    }
+
+    #tarcica_opis .description-column:nth-of-type(3){
+        order: 2;
+        height: auto;
+    }
+    
+    #okleiny_opis.active{
+        height: 715px;
+    }
+
+    #okleiny_opis .description-column:nth-of-type(3){
+        transform: translate(0px, -178px);
+        height: 291px;
+    }
+    
+    #el_meblowe_opis.active{
+        height: 376px;
+    }
+    
+    #podlogi_opis.active{
+        height: 582px;
+    }
+
+    .description-column{
+        display: block;
+        min-width: 330px;
+        max-width: 400px;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1328px){
+    .card-container .card{
+        height: 380px;
+        width: 250px;
+    }
+
+    .card-container .card-name{
+        height: 80px;
+    }
+
+    .card-name h1{
+        font-size: 1.25rem;
+    }
+
+    #tarcica_opis.active{
+        height: 741px;
+    }
+
+    #tarcica_opis :last-child{
+        order: 4;
+        height: fit-content;
+    }
+
+    #tarcica_opis .description-column:nth-of-type(2){
+        order: 2;
+    }
+
+    #tarcica_opis .description-column:nth-of-type(3){
+        order: 3;
+    }
+
+    #okleiny_opis .description-column:nth-of-type(3){
+        transform: none;
+        height: fit-content;
+    }
+}

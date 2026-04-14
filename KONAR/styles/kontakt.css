@@ -1,0 +1,171 @@
+#kontakt{
+    height: auto;
+}
+
+#kontakt .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ---DANE KONTAKTOWE--- */
+
+.contact-data{
+    display: grid;
+    width: 100vw;
+    padding: 4rem 1rem;
+    justify-content: center;
+    gap: 3rem;
+    order: 1;
+    color: var(--primary-dark);
+}
+
+.data{
+    display: grid;
+    gap: 1rem;
+}
+
+.data-item{
+    display: grid;
+}
+
+.data-item h1{
+    text-align: start;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ---FORMULARZ KONTAKTOWY--- */
+
+.contact-form{
+    display: grid;
+    width: 100vw;
+    padding: 4rem 1rem;
+    justify-content: center;
+    background-color: var(--accent);
+    color: var(--primary-white);
+    order: 3;
+    gap: 3rem;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.form-control{
+    display: grid;
+    height: 40px;
+    width: 252px;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: none;
+    border: 4px solid;
+    border-color: var(--primary-dark);
+    outline: none;
+    text-indent: 1rem;
+}
+
+textarea.form-control{
+    height: auto;
+    padding-top: .5rem;
+    min-height: 80px;
+    resize: none;
+    justify-content: center;
+}
+
+div#form_btn{
+    height: 48px;
+    width: 260px;
+    align-items: center;
+    color: var(--primary-white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    cursor: pointer;
+    text-indent: 0;
+    text-align: center;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+#form_result{
+    width: 260px;
+    display: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-indent: 0;
+    text-align: center;
+    border: none;
+}  
+
+#form_btn a{
+    position: relative;
+    color: var(--primary-white);
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+#form_btn #form_btn_bg{
+    position: absolute;
+    height: 48px;
+    width: 260px;
+    align-self: flex-end;
+    background-color: var(--primary-dark);
+    z-index: 1;
+    transition: all .5s ease-out;
+}
+
+textarea::placeholder{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: .25rem;
+}
+
+/* ---MAPA--- */
+
+.contact-map{
+    width: 100vw;
+    order: 2;
+}
+
+.contact-map iframe{
+    width: 100%;
+    min-height: 350px;
+    height: 55vh;
+    border: 0;
+}
+
+@media  (min-width: 992px) {
+    #form_btn a{
+        color: var(--primary-dark);
+    }
+
+    #form_btn #form_btn_bg{
+        height: 4px;
+    }
+
+    .contact-data,
+    .contact-form{
+        width: 50vw;
+        padding: 4rem 0;
+    }
+
+    .contact-form{
+        order: 2;
+        align-self: stretch;
+    }
+
+    .contact-map{
+        order: 3;
+        background-color: var(--primary-light);
+        display: grid;
+        justify-content: center;
+    }
+
+    .contact-map iframe{
+        width: 65vw;
+    }
+}

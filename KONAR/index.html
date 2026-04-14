@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONAR</title>
+    <link rel="shortcut icon" href="../KONAR/images/icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../KONAR/styles/main.css">
+    <link rel="stylesheet" href="../KONAR/styles/o_nas.css">
+    <link rel="stylesheet" href="../KONAR/styles/oferta.css">
+    <link rel="stylesheet" href="../KONAR/styles/galeria.css">
+    <link rel="stylesheet" href="../KONAR/styles/kontakt.css">
+
+    <!-- AOS style -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CZCIONKI-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" >
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    
+    <!-- SKRYPTY -->
+    <script src="../KONAR/scripts/photo_carousel.js" defer></script>
+    <script src="../KONAR/scripts/animations.js" defer></script>
+    <script src="../KONAR/scripts/show_oferta.js" defer></script>
+    <script src="../KONAR/scripts/form.js" defer></script>
+
+    <!-- Skrypt AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!--Skrypt EmailJS-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("nferJd921BsbWs3JI");
+    })();
+    </script>
+</head>
+<body>
+    <section id="o_nas">
+        <nav>
+            <img src="../KONAR/images/logo.png" alt="logo">
+            <ul>
+                <li id="o_nas_nav">O nas</li>
+                <li id="oferta_nav">Oferta</li>
+                <li id="galeria_nav">Galeria</li>
+                <li id="kontakt_nav">Kontakt</li>
+            </ul>
+        </nav>
+        <div class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="true"> 
+            <p>Witamy</p> 
+            <p>KONAR</p>
+            <p>Nasza firma posiada wieloletnie doświadczenie w sprzedaży tarcicy i okleiny. Zaopatrujemy fabryki mebli oraz zakłady stolarskie. Największym naszym atrybutem jest sezonowanie towaru w magazynie, gdzie temperatura utrzymywana jest na stałym poziomie niezależnie od pory roku. </p>
+        </div>
+    </section>
+    <section id="oferta">
+        <div class="container">
+            <h1 class="header">OFERTA</h1>
+            <div class="card-container" data-aos="zoom-out" data-aos-once="true">
+                <div class="card-container-row">
+                    <div class="card" id="tarcica">
+                        <div class="card-name">
+                            <h1>TARCICA SUCHA</h1>
+                        </div>
+                    </div>
+                    <div class="card" id="okleiny">
+                        <div class="card-name">
+                            <h1>OKLEINY</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container-row">
+                    <div class="card" id="el_meblowe">
+                        <div class="card-name">
+                            <h1>ELEMENTY MEBLOWE</h1>
+                        </div>
+                    </div>
+                    <div class="card" id="podlogi">
+                        <div class="card-name">
+                            <h1>PODŁOGI</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="description_container">
+                <div class="description" id="tarcica_opis">
+                    <div class="description-column">
+                        <h1>Krajowa</h1>
+                        <ul>
+                            <li class="list-title">Liściasta:</li>
+                            <li>Brzoza</li>
+                            <li>Buk</li>
+                            <li>Buk parzony</li>
+                            <li>Dąb</li>
+                            <li>Jesion</li>
+                            <li>Olcha</li>
+                            <li>Klon</li>
+                            <li class="list-title">Iglasta:</li>
+                            <li>Sosna</li>
+                            <li>Świerk</li>
+                        </ul>
+                        <div class="product-description">
+                            <p>Dostępne grubości 26/28/32/38/50/60 mm</p>
+                            <p>Tarcica ta jest dostępna we wszystkich klasach jakościowych</p>
+                            <p>Dla zainteresowanych klientów oferujemy tarcicę krajową obrzynaną</p>
+                        </div>
+                    </div>
+                    <div class="description-column">
+                        <h1>Europejska</h1>
+                        <ul>
+                            <li>Buk parzony</li>
+                            <li>Jesion</li>
+                            <li>Dąb</li>
+                            <li>Klon</li>
+                        </ul>
+                        <div class="product-description">
+                            <p>Dostępne grubości : 26/35/40/45/52/65/80 mm</p>
+                            <p>klasy : A , AB , Meblowa , Rustic</p>
+                            <p>Tarcicę o grubości 52 mm oferujemy również w postaci kłód</p>
+                        </div>
+                    </div>
+                    <div class="description-column">
+                        <h1>Egzotyczna</h1>
+                        <ul>
+                            <li>Iroko</li>
+                            <li>Khaya</li>
+                            <li>Doussie</li>
+                            <li>Mahoń - Sapelly</li>
+                            <li>Meranti</li>
+                            <li>Merbau</li>
+                            <li>Teak</li>
+                            <li>Wenge</li>
+                            <li>Zebrano</li>
+                            <li>Amazaque</li>
+                            <li>Ipe</li>
+                            <li>Orzech amerykański</li>
+                            <li>Czereśnia amerykańska</li>
+                        </ul>
+                        <div class="product-description">
+                            <p>Dostępne grubości : 26/52 mm</p>
+                            <p>klasy : Prime , 1 Fas , Common</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="description" id="okleiny_opis">
+                    <div class="description-column">
+                        <h1>Naturalne</h1>
+                        <ul>
+                            <li>Brzoza</li>
+                            <li>Buk</li>
+                            <li>Dąb</li>
+                            <li>Jesion</li>
+                            <li>Olcha</li>
+                            <li>Sosna</li>
+                        </ul>
+                    </div>
+                    <div class="description-column">
+                        <h1>Egzotyczne</h1>
+                        <ul>
+                            <li>Orzech amerykański</li>
+                            <li>Czereśnia amerykańska</li>
+                            <li>Jotoba</li>
+                            <li>Meranti</li>
+                            <li>Merbau</li>
+                            <li>Amazaque</li>
+                            <li>Ipe</li>
+                            <li>Iroko</li>
+                            <li>Sapelly</li>
+                            <li>Dąb biały</li>
+                            <li>Dąb czarny</li>
+                        </ul>
+                    </div>
+                    <div class="description-column">
+                        <h1>Modyfikowane</h1>
+                        <ul>
+                            <li>Bambus</li>
+                            <li>Teak</li>
+                            <li>Heban</li>
+                            <li>Wenge</li>
+                            <li>Zebrano</li>
+                        </ul>
+                    </div>
+                    <div class="description-column product-description">
+                        <p><b>Dostępne grubości:</b> 0,6 - 1 mm</p>
+                        <p><b>Klasy:</b> A, B</p>
+                    </div>
+                </div>
+                <div class="description" id="el_meblowe_opis">
+                    <div class ="description-column">
+                        <h1>Fryzy</h1>
+                        <ul>
+                            <li>Bukowe, lekko parzone białe</li>
+                            <li>Dębowe</li>
+                        </ul>
+                        <div class="product-description">
+                            <p>Przekrój dostosowujemy do potrzeb klienta</p>
+                        </div>
+                    </div>
+                    <div class="description-column">
+                        <h1>Klejonka</h1>
+                        <ul>
+                            <li>Buk</li>
+                            <li>Jesion</li>
+                            <li>Dąb</li>
+                            <li>Sosna</li>
+                        </ul>
+                        <div class="product-description">
+                            <p>Klejonkę liściastą i iglastą, oferujemy we wszystkich klasach i standardowych grubościach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="description" id="podlogi_opis">
+                    <div class="description-column">
+                        <h1>Deski podłogowe lite</h1>
+                        <ul>
+                            <li class="list-title">Wykończone lakierem, woskiem lub olejowoskiem</li>
+                            <li>Bambus horyzontalny</li>
+                            <li>Bambus wertykalny</li>
+                            <li>Bambus prasowany <a>(naturalny lub karmelowy, w klasie select)</a></li>
+                            <li>Merbau <a>(naturalny lub przyciemniony, w klasie select)</a></li>
+                            <li>Dąb Teramo <a>(naturalny lub barwiony, w klasie ABC)</a></li>
+                            <li>Dąb naturalny</li>
+                            <li>Dąb Pesaro</li>
+                            <li>Dąb Salerno</li>
+                        </ul>
+                    </div>
+                    <div class="description-column">
+                        <h1>Deska podłogowa, dębowa dwuwarstwowa</h1>
+                         <ul>
+                            <li class="list-title">surowa bądź wykończona olejem lub lakierem</li>
+                            <li>Szerokość: 120 - 220 mm</li>
+                            <li>Długość: 400 - 2200 mm</li>
+                            <li>Grubość: 15/20 mm, w tym:</li>
+                            <li>*4/6 mm litego drewna,</li>
+                            <li>*11/14 mm sklejka brzozowa,</li>
+                            <li>dostępna w klasach: Prime, Rustic : 0,6 - 1 mm</li>
+                            <li><b>Klasy:</b> A, B</li>
+                         </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="galeria">
+        <div class="container">
+            <h1 class="header">GALERIA</h1>
+            <div class="wrap-slider">
+                <div class="slider">
+                    <div class="inner-slider">
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-data">
+                <h1 class="header">DANE KONTAKTOWE</h1>
+                <div class="data" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
+                    <div class="data-item">
+                        <h1>Właściciel firmy:</h1>
+                        <span>Krzysztof Czartowski</span>
+                        <span>tel. kom. 509 391 841</span>
+                        <span>e-mail: krzysztof@konarswiatdrewna.pl</span>
+                    </div>
+                    <div class="data-item">
+                        <h1>Dział Obsługi Klienta:</h1>
+                        <span>Katarzyna Hofman</span>
+                        <span>tel./fax. 52 334 43 62</span>
+                    </div>
+                    <div class="data-item">
+                        <h1>Magazyn</h1>
+                        <span>tel. 510 228 954</span>
+                    </div>
+                    <div class="data-item">
+                        <h1>Topole 60</h1>
+                        <h1>89-620 Chojnice</h1>
+                    </div>
+                    <div class="data-item">
+                        <h1>GODZINY OTWARCIA</h1>
+                        <h1>Pon. – Pt.  8:00 - 16:00</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h1 class="header">FORMULARZ KONTAKTOWY</h1>
+                <form data-aos="fade-left" data-aos-duration="1200" data-aos-once="true">
+                    <input type="text" class="form-control" id="name" placeholder="Imię i Nazwisko*" required/>
+                    <input type="email" class="form-control" id="email" placeholder="E-mail*" required/>
+                    <textarea class="form-control" title="Twoja wiadomość" id="message" placeholder="....."></textarea>
+                    <div class="form-control" id="form_btn" onclick="sendForm()">
+                        <a>Wyślij</a>
+                        <div id="form_btn_bg"></div>
+                    </div>
+                    <div class="form-control" id="form_result"></div>
+                </form>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.4499747391152!2d17.517705304407922!3d53.68555616695765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470247cfbe001c03%3A0xa63ce2883fcf87c0!2sKonar%20-%20%C5%9Awiat%20Drewna!5e0!3m2!1spl!2spl!4v1683803051521!5m2!1spl!2spl" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>all rights reserved © 2023 <a>KONAR</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script><!-- jQuery skrypt -->
+    
+    <!-- AOS skrypt -->
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
